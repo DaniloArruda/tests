@@ -1,0 +1,12 @@
+<div class="progress-bar">
+  <span *ngIf="isQuantitativeMode" class="progress-bar__min">{{ min }}</span>
+  <div #progressBar class="progress-bar__bar {{ block }}">
+    <div class="progress-bar__progress is-{{type}}-state" [style.width]="progressWidth + 'px'">
+      <div *ngIf="isQuantitativeMode" class="progress-bar__edge">
+        <span class="progress-bar__value">{{ value }}</span>
+      </div>
+    </div>
+  </div>
+  <span *ngIf="isQuantitativeMode" class="progress-bar__max">{{ max }}</span>
+  <span *ngIf="isPercentageMode" class="progress-bar__percent">{{ percent }} %</span>
+</div>

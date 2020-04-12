@@ -1,0 +1,54 @@
+.progress-bar {
+  display: flex;
+  align-items: center;
+}
+
+  .progress-bar__bar {
+    display: inline-block;
+    width: 100px;
+    height: 10px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    margin: 0 10px;
+  }
+
+  .progress-bar__progress {
+    position: relative;
+    background-color: #2196F3;
+    height: 10px;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+
+    &.is-info-state {
+      background-color: #2196F3;
+    }
+    &.is-success-state {
+      background-color: rgb(71, 178, 128);
+    }
+    &.is-warning-state {
+      background-color: rgb(255, 223, 34);
+    }
+    &.is-unsafe-state {
+      background-color: rgb(255, 90, 90);
+    }
+  }
+
+  .progress-bar__edge {
+    position: absolute;
+    top: -5px;
+    right: 0;
+    background-color: #2196F3;
+    width: 1px;
+    height: 15px;
+  }
+
+  .progress-bar__value {
+    position: absolute;
+    top: -18px;
+    right: -8px;
+  }
+
+
+  .x {
+    width: 200px;
+  }
